@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    
+    </head>
+    <body>
+    
+        <div id="mainContainer">
+            <div id="columnContainer">
+                <div id="newTaskDiv" class="columnItems">
+                    <img src="./assets/plus.png" alt="" id="plusImg">
+                    <p>New task</p>
+                </div>
+                <div id="projectDivHeaderDiv" class="columnItems">
+                    <p>My Projects</p>
+                </div>
+                
+                <div id="addProjectDiv" class="columnItems">
+                    <img src="./assets/plus.png" alt="" id="plusImg">
+                    <p>Add project</p>
+                </div>
+                
+                <div id="projectColumnContainer" class="columnItems"></div>           
+            </div>
+            <div id="contentContainer">
+                <div id="taskModal" class="modal">
+                    <div id="taskModalContent">
+                        <span class="close">&times;</span>
+                        <input type="text" name="" id="taskNameP" value="TestName">
+                        <div id="taskDescriptionDiv" class="modalContentDiv">
+                            <div id="descriptionTextDiv">
+                                <p >Description</p>
+                                <input type="text" value="[Enter description]" id="taskDescriptionP">
+                            </div>
+                        </div>
+                        <div id="taskNotesDiv" class="modalContentDiv">
+                            <p>Notes</p>
+                            <div id="taskNotesTextDiv">
+                                <input type="text" value="[Enter notes here]" id="notesInputBox">
+                            </div>
+                        </div>
+                        <div id="modalButtonContainerDiv"class="modalContentDiv">
+                            <div id="saveButton"><p>Save</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contentHeader">
+                    <p>Tasks in project</p>
+                    <div id="deleteProjectDiv"><p>Delete project</p></div>
+                </div>
+                <div id="taskContainer"></div>
+            </div>
+        </div>
+        
+    </body>
+    </html>
