@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: Inter;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  :root{
+
+    --deleteButtonColor: #ef4444;
+    --deleteButtonColorHover: #f87171;
+    --main-orange: #ea580c;
+    --hover-orange: #ffedd5;
+    --grey-color: #57534e;
+
+  }
+
+  #mainContainer{
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 4fr;
+    grid-template-rows: repeat(24, 40px);
+  }
+
+  #columnContainer{
+    grid-column: 1 / 2;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: inherit;
+  }
+
+  #newTaskDiv{
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    color: var(--main-orange);
+    padding-left: 10px;
+    border-radius: 6px;
+
+  }
+
+  #newTaskDiv:hover{
+    background-color: var(--hover-orange);
+  }
+
+  #plusImg{
+    width: 25px;
+    height: 25px;
+
+  }
+
+  #projectDivHeaderDiv{
+    padding-left: 10px;
+    grid-row: 6 / 7;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+
+  #addProjectDiv{
+    grid-row: 7 / 8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--main-orange);
+  }
+
+  #projectColumnContainer{
+    display: grid;
+    grid-row: 8 / 24;
+    grid-template-rows: inherit;
+  }
+
+  .columnItems{
+    grid-column: 2 / 3;
+  }
+
+  #contentContainer{
+    display: grid;
+    grid-template-rows: inherit;
+    grid-template-columns: 5% 90% 5%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 25;
+    background-color: #fafaf9;
+    
+  }
+
+  #contentHeader{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+
+
+
+  #taskContainer{
+    grid-column: 2 / 3;
+    grid-row: 4 / 24;
+    display: grid;
+    grid-template-rows: inherit;
+    gap: 10px;
+  }
+
+  #taskContainer > div:hover {
+    background-color: var(--grey-color);
+  }
+
+  #taskModal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  #taskModalContent{
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;;
+    border-radius: 12px;
+    min-height: 50%;
+  }
+
+  #taskModalContent input{
+    border-radius: 6px;
+    width: 80%;
+    border: 1px solid grey;
+  }
+  #taskModalContent input:focus{
+    
+    outline: 1px solid var(--main-orange);
+    border: none;
+  }
+
+  .modalContentDiv input{
+
+  }
+
+  #descriptionTextDiv{
+    
+  }
+
+  #taskNotesTextDiv{
+    
+  }
+
+  #saveButton{
+    background-color: #ef4444;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 75px;
+    border-radius: 6px;
+    line-height: 35px;
+  }
+
+  #saveButton:active{
+    background-color: #fca5a5;
+
+  }
+
+  #saveButton:hover{
+    background-color: #7f1d1d;
+  }
+
+  #saveButton p{
+    flex: 1;
+    color: white;
+    text-align: center;
+  }
+
+
+  .tempTaskDiv{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+
+  }
+
+
+
+  .delBtn {
+    background-color: var(--deleteButtonColor);
+    color: white;
+    width: 40px;
+    height: 25px;
+    border-radius: 6px;
+    text-align: center;
+
+  }
+
+  .delBtn:hover{
+    background-color: var(--deleteButtonColorHover);
+  }
+
+  #deleteProjectDiv{
+
+    background-color: var(--deleteButtonColor);
+    color: white;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    border-radius: 6px;
+    line-height: 40px;
+
+  }
+
+  #deleteProjectDiv:hover{
+    background-color: var(--deleteButtonColorHover);
+  }
+
+  .projectNameDivs{
+    border-radius: 6px;
+    padding-left: 10px;
+    line-height: 40px;
+    color: var(--grey-color);
+  }
+
+  .projectNameDivs:hover{
+    background-color: var(--hover-orange);
+  }
+
+  #addProjectDiv{
+    border-radius: 6px;
+    padding-left: 10px;
+    line-height: 40px;
+  }
+
+  #addProjectDiv:hover{
+    background-color: var(--hover-orange);
+  }
