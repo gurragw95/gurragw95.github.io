@@ -14,6 +14,7 @@ body {
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: Roboto,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #FAF9F6;
 }
 
 /* 5. Improve media defaults */
@@ -52,6 +53,12 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   
+}
+
+#mainHeaderDiv{
+  font-family: Tangerine;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /*
@@ -121,7 +128,6 @@ h1, h2, h3, h4, h5, h6 {
 
   #midContainer{
       margin-top: 25px;
-      border: 1px solid purple;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -141,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   #infoDiv{
-      align-self:flex-start;
+      align-self:centert;
       font-size: 1rem;
   }
 
