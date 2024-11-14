@@ -165,6 +165,37 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
   }
 
+  #vigselDiv{
+    margin-top: 10px;
+    width: 90%;
+  }
+
+  .subSectionDiv{
+    margin-top: 10px;
+    width: 90%;
+  }
+
+  .subSectionHeaderDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .subSectionHeader{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .subSectionInfoDiv{
+    margin-top: 25px;
+    
+  }
+
+  .subSectionParaLarge{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
   
 
 }
