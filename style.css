@@ -1,180 +1,206 @@
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: Roboto,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+#mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
-  /* 2. Remove default margin */
-  * {
-    margin: 0;
+}
+
+/*
+  TELEFONER
+*/
+
+@media (max-width:480px){
+
+  .navDiv{
+      display: flex;
+      width: 100%;
+      height: 40px;
+      justify-content: left;
   }
+
+  #navBarDivider{
+      border: 1px solid lightgray;
+      width: 100%;
+
+  }
+
+  #phoneMenuButtonDiv{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: 75px;
+  }
+
+  #menuImg{
+      height: 80%;
+  }
+
+  .navSubDiv{
+      display: none;
+      border: 1px solid green;
+      height: 100%;
+      min-width: 50px;
+      padding: 10px;
+  }
+
+  #phoneMenuDiv{
+      display: none;
+      width: 100%;
+      border: 1px solid yellow;
+      height: 50px;
+      flex-direction: column;
+  }
+
   
-  body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-    font-family: Roboto,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  .phoneMenuSubDiv{
+      width: 100%;
+      height: 25px;
+      background-color: #e7e5e4;
+              
   }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+
+  #welcomeDiv{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
   }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
+
+  #welcomeDivP{
+      
   }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+
+  #midContainer{
+      margin-top: 25px;
+      border: 1px solid purple;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
-  
-  /* 8. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  /*
-    9. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
+
+  #mainHeaderDiv{
+
   }
 
   #mainContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+      min-width: 245px;
   }
 
-  /*
-    TELEFONER
-  */
+  #mainImgDiv{
+      width: 100%;
+      margin-bottom: 10px;
 
-  @media (max-width:480px){
+  }
 
-    .navDiv{
-        display: flex;
-        border: 1px solid red;
-        width: 100%;
-        height: 50px;
-        justify-content: left;
-    }
+  #infoDiv{
+      align-self:flex-start;
+      font-size: 1rem;
+  }
 
-    #phoneMenuButtonDiv{
-        height: 100%;
-        width: 50px;
-        border: 1px solid green;
-    }
-
-    .navSubDiv{
-        display: none;
-        border: 1px solid green;
-        height: 100%;
-        min-width: 50px;
-        padding: 10px;
-    }
-
-    #phoneMenuDiv{
-        display: none;
-        width: 100%;
-        border: 1px solid yellow;
-        height: 50px;
-        flex-direction: column;
-    }
-
-    .phoneMenuSubDiv{
-        width: 100%;
-        height: 25px;
-        background-color: #e7e5e4;
-                
-    }
-
-    #welcomeDiv{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-
-    }
-
-    #welcomeDivP{
-        
-    }
-
-    #midContainer{
-        margin-top: 25px;
-        border: 1px solid purple;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #mainHeaderDiv{
-
-    }
-
-    #mainContainer{
-        min-width: 245px;
-    }
-
-    #mainImgDiv{
-        width: 100%;
-        height: 100px;
-    }
-
+  .dividerLine{
+      border: 1px solid grey;
+      margin-bottom: 10px;
+      width: 90%;
   }
 
   
-  /*
-    Allt större än telefoner
-  */
 
-  @media (min-width:481px){
+}
 
-    .navDiv{
-        display: flex;
-        border: 1px solid red;
-        width: 100%;
-        height: 50px;
-        justify-content: center;
-    }
 
-    .navSubDiv{
-        border: 1px solid green;
-        height: 100%;
-        min-width: 50px;
-        padding: 10px;
-    }
+/*
+  Allt större än telefoner
+*/
 
-    #phoneMenuButtonDiv{
-       display: none;
-    }
+@media (min-width:481px){
 
-    #phoneMenuDiv{
-        display: none;
-    }
+  .navDiv{
+      display: flex;
+      border: 1px solid red;
+      width: 100%;
+      height: 50px;
+      justify-content: center;
+  }
 
-    #midContainer{
-        margin-top: 25px;
-        border: 1px solid purple;
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .navSubDiv{
+      border: 1px solid green;
+      height: 100%;
+      min-width: 50px;
+      padding: 10px;
+  }
 
-    #mainHeaderDiv{
+  #phoneMenuButtonDiv{
+     display: none;
+  }
 
-    }
+  #phoneMenuDiv{
+      display: none;
+  }
+
+  #midContainer{
+      margin-top: 25px;
+      border: 1px solid purple;
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #mainHeaderDiv{
 
   }
+
+}
 
