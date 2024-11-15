@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f1f5f9;
   
 }
 
@@ -167,12 +168,15 @@ h1, h2, h3, h4, h5, h6 {
 
   #vigselDiv{
     margin-top: 10px;
-    width: 90%;
+    width: 95%;
+    background-color: white;
   }
 
   .subSectionDiv{
     margin-top: 10px;
-    width: 90%;
+    width: 95%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
   .subSectionHeaderDiv{
@@ -188,6 +192,9 @@ h1, h2, h3, h4, h5, h6 {
 
   .subSectionInfoDiv{
     margin-top: 25px;
+    padding: 15px;
+    padding-bottom: 35px;
+    background-color: white;
     
   }
 
