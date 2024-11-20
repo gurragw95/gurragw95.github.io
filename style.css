@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 /*
   9. Create a root stacking context
 */
@@ -63,11 +67,14 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+
+
 /*
   TELEFONER
 */
 
 @media (max-width:480px){
+
 
   .navDiv{
       display: flex;
