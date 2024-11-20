@@ -1,5 +1,6 @@
 let phoneMenuButton;
 let phoneMenuDiv;
+const navDiv = document.querySelector("#navDiv");
 
 
 //######### TELEFONSPECIFIKT ##################
@@ -14,15 +15,17 @@ document.addEventListener("click", (e)=>{
     if (phoneMenuButton.contains(e.target)){
         if(phoneMenuDiv.style.display === "none"){
             phoneMenuDiv.style.display = "flex";
+            navDiv.style.backgroundColor = "#f1f5f9";
         } else{
             phoneMenuDiv.style.display = "none";
+            navDiv.style.backgroundColor = "transparent";
         }
         
     };
 });
 
 //Scroll detection. När man scrollat ner med telefonen ner till "information", så blir navbaren inte längre osynlig
-const navDiv = document.querySelector("#navDiv");
+
 const summaryHeaderDiv = document.querySelector("#summaryHeaderDiv");
 
 document.addEventListener("scroll", ()=>{
