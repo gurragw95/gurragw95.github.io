@@ -20,3 +20,16 @@ document.addEventListener("click", (e)=>{
         
     };
 });
+
+//Scroll detection. När man scrollat ner med telefonen ner till "information", så blir navbaren inte längre osynlig
+const navDiv = document.querySelector("#navDiv");
+const summaryHeaderDiv = document.querySelector("#summaryHeaderDiv");
+
+document.addEventListener("scroll", ()=>{
+    const sectionTop = summaryHeaderDiv.offsetTop;
+    if(window.scrollY >= sectionTop){
+        navDiv.classList.add("scrolled");
+    } else{
+        navDiv.classList.remove("scrolled");
+    }
+})
