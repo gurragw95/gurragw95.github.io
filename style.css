@@ -173,8 +173,15 @@ html {
       width: 100%;
       margin-bottom: 10px;
       margin-top: 10px;
+      height: 350px;
+      
+      overflow: hidden;
       
 
+  }
+
+  #mainImg{
+    margin-top: -125px;
   }
 
   #infoDiv{
