@@ -67,13 +67,17 @@ html {
   z-index: 1;
 }
 
+a {
+  text-decoration: none;
 
+}
 
 /*
   TELEFONER
 */
 
 @media (max-width:480px){
+  
 
 
   .navDiv{
@@ -136,6 +140,12 @@ html {
       background-color: #f1f5f9;
       padding: 10px;
               
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 18px;
+    color: gray;
   }
 
 
